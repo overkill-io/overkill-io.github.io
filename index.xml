@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overkill.io</title>
-    <link>http://overkill.io/index.xml</link>
+    <link>https://overkill.io/index.xml</link>
     <description>Recent content on Overkill.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2017 Overkill.io</copyright>
     <lastBuildDate>Sat, 01 Apr 2017 22:08:49 +0200</lastBuildDate>
-    <atom:link href="http://overkill.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://overkill.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hello World</title>
-      <link>http://overkill.io/post/hello-world/</link>
+      <link>https://overkill.io/post/hello-world/</link>
       <pubDate>Sat, 01 Apr 2017 22:08:49 +0200</pubDate>
       
-      <guid>http://overkill.io/post/hello-world/</guid>
+      <guid>https://overkill.io/post/hello-world/</guid>
       <description>&lt;p&gt;This is a mandatory post for each new blog, so we can&amp;rsquo;t be different!&lt;/p&gt;
 </description>
     </item>
