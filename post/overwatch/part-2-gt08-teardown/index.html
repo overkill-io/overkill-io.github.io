@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Part 2 - GT08 Teardown -- Overkill.io</title>
+
+    
+
+    
+    <link href="http://overkill.io//css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" rel="stylesheet">
+
+    
+    <link href="http://overkill.io//css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://overkill.io/">Overkill.io</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://overkill.io/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://overkill.io/categories/">categories</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://overkill.io/post/">archives</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://overkill.io///img/project-overwatch/part2/bg.jpg')">
+      
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Part 2 - GT08 Teardown</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+Posted by <a>arturo182</a> on Apr 3, 2017
+
+<br />
+In <a href="http://overkill.io/categories/project-overwatch">Project: Overwatch</a>
+
+
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>In the previous part of this dev blog I mentioned that I chose the chinese GT08 smartwatch as the base for a DIY smartwatch project. In this part we&rsquo;ll go through a teardown of one such watch and we&rsquo;ll compare it with another GT08 that was acquired from a different source.</p>
+
+<h1 id="the-casing">The casing</h1>
+
+<p>The GT08&rsquo;s body is pretty uniform, the metal casing bounds the watch on both sides, with the pretty seamless LCD on the front and a plastic cover on the back, the cover doesn&rsquo;t require any screws, it just clips on.</p>
+
+<p>On the left side, the watch has a microphone hole on the top, a rubber plug hiding the micro USB in the middle and a speaker grill on the bottom. The rubber plug has a hole in it to make it easier to pull it out. This, in addition to the hole and grill, means the watch is not water tight, but it might survive a quick splash while washing ones hands. On the right side there is a single button, it looks like it might turn, but it is a simple button that only register pushes. Above the screen there is a round, transparent window that is used by the camera for taking watch-selfies, as I mentioned in Part 1, the plan is to put a <abbr title="Ambient Light Sensor">ALS</abbr> there, which will allow dynamic screen brightness adjustment.</p>
+
+<div class="row">
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0903.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0903.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0904.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0904.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0909.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0909.JPG" alt="" title="" class="img-responsive"></a></div> 
+</div>
+
+<p>The straps are not interchangeable with regular watch bands, but they can be removed. One of the straps has the GSM antenna inside it and while we won&rsquo;t be using GSM in our replacement hardware, we could try to reuse the antenna so we can escape the metal casing and get better <abbr title="Bluetooth Low Energy">BLE</abbr> range. Another option is to remove the straps and mount 3d printed adapter which would enable using regular watch straps. And while regular 43mm straps seem a little to narrow, it&rsquo;s hard to asses at this point if wider straps are needed, but it is a future option.</p>
+
+<h1 id="the-hardware">The hardware</h1>
+
+<p>Describe what&rsquo;s under the back plate, mention battery</p>
+
+<div class="row">
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0911.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0911.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0913.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0913.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0916.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0916.JPG" alt="" title="" class="img-responsive"></a></div> 
+</div>
+
+<p>Describe about the screwed on back, mention speaker and vibrator</p>
+
+<div class="row">
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0917.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0917.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0918.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0918.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0920.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0920.JPG" alt="" title="" class="img-responsive"></a></div> 
+</div>
+
+<p>Explain more PCB stuff and microphone, mention the missing connector. Mention that we don&rsquo;t go too deep into this PCB, but there are more shots later in the post.</p>
+
+<div class="row">
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0921.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0921.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0922.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0922.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0923.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0923.JPG" alt="" title="" class="img-responsive"></a></div> 
+</div>
+
+<p>Mention that there are 2 connectors for LCD, and that PCB is held by two clips</p>
+
+<div class="row">
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0924.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0924.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0925.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0925.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-4"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0926.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0926.JPG" alt="" title="" class="img-responsive"></a></div> 
+</div>
+
+<p>Talk about the back, mention button and maybe camera</p>
+
+<div class="row">
+  <div class="col-md-6"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0928.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0928.JPG" alt="" title="" class="img-responsive"></a></div>
+  <div class="col-md-6"><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part2/IMG_0929.JPG"><img src="http://overkill.io/img/project-overwatch/part2/IMG_0929.JPG" alt="" title="" class="img-responsive"></a></div>
+</div>
+
+<h1 id="the-differences-between-sources">The differences between sources</h1>
+
+<p>Connectors, interfaces, yada yada</p>
+
+<h1 id="a-look-the-gt08-pcb-design">A look the GT08 PCB design</h1>
+
+<p>Microscope photos</p>
+
+<h1 id="proceeding-from-here">Proceeding from here</h1>
+
+<p>Reverse the LCD, show the bare PCB and mention design with same size</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                      <a href="https://github.com/overkill-io">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">© 2017 Overkill.io</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://overkill.io//js/jquery.min.js"></script>
+
+    
+    <script src="http://overkill.io//js/bootstrap.min.js"></script>
+
+    
+    <script src="http://overkill.io//js/clean-blog.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+    
+
+</body>
+
+</html>
+

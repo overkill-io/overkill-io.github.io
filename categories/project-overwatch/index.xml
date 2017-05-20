@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Overkill.io</title>
-    <link>http://overkill.io/index.xml</link>
-    <description>Recent content on Overkill.io</description>
+    <title>Project Overwatch on Overkill.io</title>
+    <link>http://overkill.io/categories/project-overwatch/index.xml</link>
+    <description>Recent content in Project Overwatch on Overkill.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2017 Overkill.io</copyright>
-    <lastBuildDate>Mon, 03 Apr 2017 22:47:27 +0200</lastBuildDate>
-    <atom:link href="http://overkill.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://overkill.io/categories/project-overwatch/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Part 2 - GT08 Teardown</title>
@@ -139,16 +138,6 @@ Plus the displays used in those watches use high-speed parallel interfaces, whic
 &lt;p&gt;As for the LCD and touch, we&amp;rsquo;ll have to see if they need extra chips, what interfaces they use and what can we do with them.&lt;/p&gt;
 
 &lt;p&gt;That&amp;rsquo;s it for now, see you soon in the next post.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>http://overkill.io/post/hello-world/</link>
-      <pubDate>Sat, 01 Apr 2017 22:08:49 +0200</pubDate>
-      
-      <guid>http://overkill.io/post/hello-world/</guid>
-      <description>&lt;p&gt;This is a mandatory post for each new blog, so we can&amp;rsquo;t be different!&lt;/p&gt;
 </description>
     </item>
     

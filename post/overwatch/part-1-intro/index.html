@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Part 1 - Introduction -- Overkill.io</title>
+
+    
+
+    
+    <link href="http://overkill.io//css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" rel="stylesheet">
+
+    
+    <link href="http://overkill.io//css/clean-blog.min.css" rel="stylesheet">
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+    
+    
+
+</head>
+
+<body>
+
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://overkill.io/">Overkill.io</a>
+            </div>
+
+                       
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li>
+                        <a href="http://overkill.io/">home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://overkill.io/categories/">categories</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://overkill.io/post/">archives</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+           
+
+        </div>
+        
+    </nav>
+
+
+    
+    
+    <header class="intro-header" style="background-image: url('http://overkill.io///img/project-overwatch/part1/bg.jpg')">
+      
+      <div class="container">
+        <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="post-heading">
+               <h1>Part 1 - Introduction</h1>
+               <h2 class="subheading"></h2>
+               <span class="meta">
+                 
+Posted by <a>arturo182</a> on Apr 2, 2017
+
+<br />
+In <a href="http://overkill.io/categories/project-overwatch">Project: Overwatch</a>
+
+
+
+               </span>
+             </div>
+           </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  
+
+<p>This is the dev log for one of the Overkill projects, we&rsquo;ll see how far it goes. You never know with these kinds of projects. The purpose of this dev blog is for me to have a place to track my progress, archive my findings and maybe even someone finds this interesting.</p>
+
+<h1 id="basic-idea">Basic idea</h1>
+
+<p>The idea behind this project is to build a smartwatch, but one that might actually look half-decent.
+Secondary goal is to have a half-decent battery life (targeting a week), unlike the likes of Android Wear and Apple Watch.</p>
+
+<p>There are quite a few DIY smartwatches out there, but they all have either a visible PCB or a no-so-well-looking 3d printed casing.
+Since making a thing look professional takes money and time, we can go for the second-best thing - we use an existing casing, and just put our DIY hardware in it. By hardware I mean, replace the whole PCB, using only the casing and things like vibrator and screen.</p>
+
+<h1 id="the-body-donor">The body donor</h1>
+
+<p>Again, since the idea is to be cheap, we can&rsquo;t go around building Android Wear watches left and right to disassemble, reverse and (probably) break.
+Plus the displays used in those watches use high-speed parallel interfaces, which would be hard to implement in a Cortex-M microcontroller, which I&rsquo;m planning to use as the brains of this project.</p>
+
+<p>With those assumptions/limitations, we turn to the universal provider of cheap hardware - China and Aliexpress.</p>
+
+<p>After looking through quite a few cheap smartwatches there I managed to find one that looks half decent (even if it&rsquo;s a clone of the Apple Watch), with a price point of around $10. This particular watch model is named the GT08.</p>
+
+<p><a data-fancybox="gallery" href="http://overkill.io/img/project-overwatch/part1/very_ali_image.jpg"><img src="http://overkill.io/img/project-overwatch/part1/very_ali_image.jpg" alt="Just screams 'quality'!" title="Just screams 'quality'!" class="img-responsive"></a></p>
+
+<p>The watch has a 1.54&rdquo;, 262K color, LCD with a resolution of 240x240 px, a capacitive touch screen, a speaker, microphone, vibrator, a front camera (not needed, but more on that later), a micro usb connector on the side, one button and a replaceable battery. Seems it has enough peripherals to be a good body donor.</p>
+
+<h1 id="how-to-proceed-from-here">How to proceed from here</h1>
+
+<p>In my opinion, the display, touch and vibrator are essential to a smartwatch, everything else is just icing on the cake. Therefore, the first thing to do is to reverse the display and touch screen protocols, if that can be achieved, we&rsquo;re golden. After that we can design a &ldquo;big&rdquo; PCB with all the components that we want in the final design laid out in a way that will make bring-up and debugging as easy as possible. The &ldquo;big&rdquo; board will probably go through a few iterations before it shrinks to fit the casing. I currently own two of the GT08 watches with more on their way. In the next post I will post a teardown of the watches and see differences between the models (yes, they do differ in a meaningful way) and we&rsquo;ll be able to see what we can reuse and what we&rsquo;ll need to design from scratch.</p>
+
+<h1 id="the-planned-hardware">The planned hardware</h1>
+
+<p>The plan is to use a Nordic Semi nRF52832 chip which is a Cortex-M4F microcontroller with 512kB of flash and 64kB of RAM, it also contains a <abbr title="Bluetooth Low Energy">BLE</abbr> transceiver, which is useful for communicating with a phone. I might end up bumping that to the newest Nordic Semi chip, the nRF52840, which offers more GPIOs, supports USB and can run from a 3.7V LiPo.</p>
+
+<p>As for the peripherals, I want to keep the speaker and microphone (at least for the first big board version, might get rid of them later), the microphone will need an amplifier and the speaker will need an amplifier and a I2S audio codec (because the nRF doesn&rsquo;t have Analog in), get rid of the camera and replace it with a <abbr title="Ambient Light Sensor">ALS</a> (there is a transparent window in the display, where the ALS can go) to adjust the LCD backlight.</p>
+
+<p>Additionally a accelerometer/gyroscope would be nice, so the watch can detect when the user picks the watch up to look at it and turn on the brightness.</p>
+
+<p>The USB port on the side can be used for charging the battery and a UART for debugging, since the nRF52832 does not support native USB, a UART-to-USB chip will be needed.</p>
+
+<p>The vibrator can be controlled with a simple MOSFET.</p>
+
+<p>As for the LCD and touch, we&rsquo;ll have to see if they need extra chips, what interfaces they use and what can we do with them.</p>
+
+<p>That&rsquo;s it for now, see you soon in the next post.</p>
+
+                  
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                      <a href="https://github.com/overkill-io">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                      </a>
+                    </li>
+                    
+                  </ul>
+                  <p class="copyright text-muted">© 2017 Overkill.io</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="http://overkill.io//js/jquery.min.js"></script>
+
+    
+    <script src="http://overkill.io//js/bootstrap.min.js"></script>
+
+    
+    <script src="http://overkill.io//js/clean-blog.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+    
+
+</body>
+
+</html>
+
